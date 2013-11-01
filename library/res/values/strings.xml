@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="no_app_to_share">No app installed to share data of type %s!</string>
+    <string name="no_share_type">No share type specified!</string>
+    <string name="error_occurred">Sorry, an error occurred.</string>
+
+</resources>

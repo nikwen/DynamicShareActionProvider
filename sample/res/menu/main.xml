@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:library="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_item_share"
+          library:showAsAction="always"
+          android:title="Share"
+          android:icon="@drawable/abc_ic_menu_share_holo_dark"
+          library:actionProviderClass="de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider" />
+
+</menu>
