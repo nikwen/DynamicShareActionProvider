@@ -27,7 +27,8 @@ The differences:
 Screenshots:
 ------------
 
-![screenshot_1.png](https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_1.png "Screenshot 1") ![screenshot_2.png](https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_2.png "Screenshot 2")
+![screenshot_1.png](https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_1_resized.png "Screenshot 1") [         ] ![screenshot_2.png](https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_2_resized.png "Screenshot 2")
+
 (The second screenshot is from the app [FunctionCapture](https://play.google.com/store/apps/details?id=com.simplicityapks.functioncapture) by [SimplicityApks](https://github.com/SimplicityApks))
 
 Big thanks to:
