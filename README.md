@@ -1,7 +1,7 @@
 DynamicShareActionProvider
 ==========================
 
-My own implementation of the [ShareActionProvider](http://developer.android.com/reference/android/support/v7/widget/ShareActionProvider.html) by Google.
+Custom implementation of the [ShareActionProvider](http://developer.android.com/reference/android/support/v7/widget/ShareActionProvider.html) by Google.
 
 The differences:
 ----------------
@@ -27,7 +27,16 @@ The differences:
 Screenshots:
 ------------
 
-![screenshot_1.png](https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_1_resized.png "Screenshot 1") [         ] ![screenshot_2.png](https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_2_resized.png "Screenshot 2")
+<table border="0">
+  <colgroup>
+    <col width="*">
+    <col width="*">
+    </colgroup>
+  <tr>
+    <td align="center"><img src="https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_1_resized.png"></td>
+    <td align="center"><img src="https://raw.github.com/nikwen/DynamicShareActionProvider/master/screenshot_2_resized.png"></td>
+  </tr>
+</table>
 
 (The second screenshot is from the app [FunctionCapture](https://play.google.com/store/apps/details?id=com.simplicityapks.functioncapture) by [SimplicityApks](https://github.com/SimplicityApks))
 
