@@ -3,5 +3,6 @@
 
     <string name="app_name">DynamicShareActionProvider Demo</string>
     <string name="explanation">Enter the text to share:</string>
+    <string name="asynctask">Sharing data from a super long AsyncTask.</string>
 
 </resources>

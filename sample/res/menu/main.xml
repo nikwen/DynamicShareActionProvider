@@ -7,4 +7,10 @@
           android:icon="@drawable/abc_ic_menu_share_holo_dark"
           library:actionProviderClass="de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider" />
 
+    <item android:id="@+id/menu_item_share_later"
+          library:showAsAction="never"
+          android:title="Share later"
+          android:icon="@drawable/abc_ic_menu_share_holo_dark"
+          library:actionProviderClass="de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider" />
+
 </menu>

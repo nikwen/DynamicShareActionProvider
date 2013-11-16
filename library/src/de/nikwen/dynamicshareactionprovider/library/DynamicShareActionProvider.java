@@ -38,7 +38,7 @@ public class DynamicShareActionProvider extends ActionProvider {
     private Context context;
     private Intent shareIntent;
 
-    private OnShareIntentUpdateListener listener = null;
+    private Object listener = null;
 
     public DynamicShareActionProvider(Context context) {
         super(context);
@@ -55,6 +55,14 @@ public class DynamicShareActionProvider extends ActionProvider {
     }
 
     public void setOnShareIntentUpdateListener(OnShareIntentUpdateListener listener) {
+        if (listener != null) {
+            this.listener = listener;
+        } else {
+            throw new NullPointerException("listener must not be null!");
+        }
+    }
+
+    public void setOnShareLaterListenerListener(OnShareLaterListener listener) {
         if (listener != null) {
             this.listener = listener;
         } else {
@@ -108,8 +116,6 @@ public class DynamicShareActionProvider extends ActionProvider {
             if (listener == null) {
                 return false;
             } else {
-                shareIntent.putExtras(listener.onShareIntentExtrasUpdate());
-
                 ActivityInfo activity = list.get(position).activityInfo;
                 ComponentName name = new ComponentName(activity.applicationInfo.packageName,
                         activity.name);
@@ -117,8 +123,21 @@ public class DynamicShareActionProvider extends ActionProvider {
                         Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
                 shareIntent.setComponent(name);
 
-                context.startActivity(shareIntent);
-                return true;
+                if (listener instanceof OnShareIntentUpdateListener) {
+                    OnShareIntentUpdateListener onShareIntentUpdateListener = (OnShareIntentUpdateListener) listener;
+                    shareIntent.putExtras(onShareIntentUpdateListener.onShareIntentExtrasUpdate());
+
+                    context.startActivity(shareIntent);
+
+                    return true;
+                } else if (listener instanceof OnShareLaterListener) {
+                    OnShareLaterListener onShareLaterListener = (OnShareLaterListener) listener;
+                    onShareLaterListener.onShareClick(shareIntent);
+
+                    return true;
+                }
+
+                return false;
             }
         }
 
@@ -133,4 +152,11 @@ public class DynamicShareActionProvider extends ActionProvider {
         public Bundle onShareIntentExtrasUpdate();
 
     }
+
+    public interface OnShareLaterListener {
+
+        public void onShareClick(Intent shareIntent);
+
+    }
+
 }

@@ -16,11 +16,14 @@
 
 package de.nikwen.dynamicshareactionprovider.sample;
 
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider;
 
@@ -50,6 +53,48 @@ public class MainActivity extends ActionBarActivity {
             }
 
         });
+
+        DynamicShareActionProvider shareLaterProvider = (DynamicShareActionProvider) MenuItemCompat.getActionProvider(menu.findItem(R.id.menu_item_share_later));
+        shareLaterProvider.setShareDataType("text/plain");
+        shareLaterProvider.setOnShareLaterListenerListener(new DynamicShareActionProvider.OnShareLaterListener() {
+
+            @Override
+            public void onShareClick(Intent shareIntent) {
+                MyShareAsyncTask task = new MyShareAsyncTask();
+                task.execute(shareIntent);
+            }
+
+        });
+
         return true;
     }
+
+    private class MyShareAsyncTask extends AsyncTask<Intent, Void, Intent> {
+
+        @Override
+        protected void onPreExecute() {
+            Toast.makeText(MainActivity.this, R.string.asynctask, Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        protected Intent doInBackground(Intent... intents) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            EditText shareEdit = (EditText) findViewById(R.id.share_edit);
+            intents[0].putExtra(android.content.Intent.EXTRA_TEXT, "Shared from an AsyncTask: " + shareEdit.getText().toString());
+
+            return intents[0];
+        }
+
+        @Override
+        protected void onPostExecute(Intent intent) {
+            startActivity(intent);
+        }
+
+    }
+
 }
