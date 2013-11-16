@@ -128,9 +128,9 @@ public class DynamicShareActionProvider extends ActionProvider {
 
     }
 
-    public abstract class OnShareIntentUpdateListener {
+    public interface OnShareIntentUpdateListener {
 
-        public abstract Bundle onShareIntentExtrasUpdate();
+        public Bundle onShareIntentExtrasUpdate();
 
     }
 }

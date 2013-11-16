@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
 
         DynamicShareActionProvider provider = (DynamicShareActionProvider) MenuItemCompat.getActionProvider(menu.findItem(R.id.menu_item_share));
         provider.setShareDataType("text/plain");
-        provider.setOnShareIntentUpdateListener(provider.new OnShareIntentUpdateListener() {
+        provider.setOnShareIntentUpdateListener(new DynamicShareActionProvider.OnShareIntentUpdateListener() {
 
             @Override
             public Bundle onShareIntentExtrasUpdate() {
