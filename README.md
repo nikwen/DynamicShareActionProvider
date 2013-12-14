@@ -40,6 +40,11 @@ Screenshots:
 
 (The second screenshot is from the app [FunctionCapture](https://play.google.com/store/apps/details?id=com.simplicityapks.functioncapture) by [SimplicityApks](https://github.com/SimplicityApks))
 
+Tutorial:
+---------
+
+I created a tutorial for this library as well. It can be found on [XDA](http://forum.xda-developers.com/showthread.php?t=2569919).
+
 Big thanks to:
 --------------
 
