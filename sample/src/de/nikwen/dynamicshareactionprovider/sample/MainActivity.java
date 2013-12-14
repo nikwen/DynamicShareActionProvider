@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
 
         DynamicShareActionProvider shareLaterProvider = (DynamicShareActionProvider) MenuItemCompat.getActionProvider(menu.findItem(R.id.menu_item_share_later));
         shareLaterProvider.setShareDataType("text/plain");
-        shareLaterProvider.setOnShareLaterListenerListener(new DynamicShareActionProvider.OnShareLaterListener() {
+        shareLaterProvider.setOnShareLaterListener(new DynamicShareActionProvider.OnShareLaterListener() {
 
             @Override
             public void onShareClick(Intent shareIntent) {
