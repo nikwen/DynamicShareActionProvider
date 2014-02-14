@@ -23,11 +23,12 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.support.v4.view.ActionProvider;
-import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.widget.Toast;
+
+import com.actionbarsherlock.view.ActionProvider;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.SubMenu;
 
 import java.util.List;
 
@@ -122,6 +123,8 @@ public class DynamicShareActionProvider extends ActionProvider {
             Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
         }
     }
+
+
 
     public class OnMenuItemClickUpdateIntentListener implements MenuItem.OnMenuItemClickListener {
 

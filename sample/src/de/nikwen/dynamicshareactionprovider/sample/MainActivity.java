@@ -19,15 +19,15 @@ package de.nikwen.dynamicshareactionprovider.sample;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+
 import de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends SherlockActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +38,9 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getSupportMenuInflater().inflate(R.menu.main, menu);
 
-        DynamicShareActionProvider provider = (DynamicShareActionProvider) MenuItemCompat.getActionProvider(menu.findItem(R.id.menu_item_share));
+        DynamicShareActionProvider provider = (DynamicShareActionProvider) menu.findItem(R.id.menu_item_share).getActionProvider();
         provider.setShareDataType("text/plain");
         provider.setOnShareIntentUpdateListener(new DynamicShareActionProvider.OnShareIntentUpdateListener() {
 
@@ -54,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
 
         });
 
-        DynamicShareActionProvider shareLaterProvider = (DynamicShareActionProvider) MenuItemCompat.getActionProvider(menu.findItem(R.id.menu_item_share_later));
+        DynamicShareActionProvider shareLaterProvider = (DynamicShareActionProvider) menu.findItem(R.id.menu_item_share_later).getActionProvider();
         shareLaterProvider.setShareDataType("text/plain");
         shareLaterProvider.setOnShareLaterListener(new DynamicShareActionProvider.OnShareLaterListener() {
 

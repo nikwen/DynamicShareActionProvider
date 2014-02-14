@@ -1,16 +1,15 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:library="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item android:id="@+id/menu_item_share"
-          library:showAsAction="always"
+          android:showAsAction="always"
           android:title="Share"
           android:icon="@drawable/abc_ic_menu_share_holo_dark"
-          library:actionProviderClass="de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider" />
+          android:actionProviderClass="de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider" />
 
     <item android:id="@+id/menu_item_share_later"
-          library:showAsAction="never"
+          android:showAsAction="never"
           android:title="Share later"
           android:icon="@drawable/abc_ic_menu_share_holo_dark"
-          library:actionProviderClass="de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider" />
+          android:actionProviderClass="de.nikwen.dynamicshareactionprovider.library.DynamicShareActionProvider" />
 
 </menu>
