@@ -23,7 +23,7 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.support.v4.view.ActionProvider;
+import android.view.ActionProvider;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
