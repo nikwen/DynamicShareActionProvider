@@ -40,6 +40,15 @@ Screenshots:
 
 (The second screenshot is from the app [FunctionCapture](https://play.google.com/store/apps/details?id=com.simplicityapks.functioncapture) by [SimplicityApks](https://github.com/SimplicityApks))
 
+Native ActionBar, ActionBarCompat or ActionBarSherlock?
+--------------------------------------------------------
+
+The DynamicShareActionProvider supports all of them. Just use the respective branch:
+
+* [`native`](https://github.com/nikwen/DynamicShareActionProvider/tree/native) for the native ActionBar
+* [`master`](https://github.com/nikwen/DynamicShareActionProvider/tree/master) for ActionBarCompat
+* [`actionbarsherlock`](https://github.com/nikwen/DynamicShareActionProvider/tree/actionbarsherlock) for ActionBarSherlock
+
 Tutorial:
 ---------
 
