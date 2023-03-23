@@ -1,7 +1,7 @@
 DynamicShareActionProvider
 ==========================
 
-Custom implementation of the [ShareActionProvider](http://developer.android.com/reference/android/support/v7/widget/ShareActionProvider.html) by Google.
+Custom implementation of Google's [ShareActionProvider](http://developer.android.com/reference/android/support/v7/widget/ShareActionProvider.html).
 
 The differences:
 ----------------
@@ -58,3 +58,8 @@ Big thanks to:
 --------------
 
 * [SimplicityApks](https://github.com/SimplicityApks) for some ideas
+
+Also check out:
+---------------
+
+* [Terminal Tutor](https://www.terminaltutor.com), an interactive tutorial for learning how to use the terminal
